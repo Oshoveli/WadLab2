@@ -1,111 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- contact_details.html -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Details</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #2171FF;
-        }
-
-        /* Floating island effect for navbar */
-        .navbar {
-            background-color: #e7e5e4;
-            border-radius: 20px;
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-around;
-            width: auto;
-        }
-
-        .navbar button {
-            font-size: 2em;
-            padding: 10px 20px;
-            background-color: transparent;
-            transition: all 0.2s ease-out;
-            border: none;
-            cursor: pointer;
-        }
-
-        .button__span {
-            color: #131313;
-            transition: all 0.2s ease-out;
-            background-color: #e7e5e4;
-            letter-spacing: .15em;
-            text-shadow: 1px -1px 0 #767676, 
-                         -1px 2px 1px #737272, 
-                         -2px 4px 1px #767474, 
-                         -3px 6px 1px #787777, 
-                         -4px 8px 1px #7b7a7a, 
-                         -5px 10px 1px #7f7d7d, 
-                         -6px 12px 1px #828181;
-        }
-
-        .button__span:hover {
-            text-shadow: -1px -1px 0 #767676, 
-                         1px 2px 1px #737272, 
-                         2px 4px 1px #767474;
-        }
-
-        .button:active .button__span {
-            text-shadow: none;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 100px auto; /* Adjusted to make room for the navbar */
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-
-        .details {
-            margin-top: 20px;
-        }
-
-        .details p {
-            margin: 10px 0;
-        }
-
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                width: 90%;
-            }
-
-            .navbar button {
-                width: 100%;
-            }
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../CSS/contact_details.css">
 </head>
 <body>
     <nav class="navbar">
@@ -118,22 +18,66 @@
         <button class="button">
             <span class="button__span">Contact</span>
         </button>
+        <button onclick="location.href='login.html'" class="button">
+            <span class="button__span">Login</span>
+        </button>
+        <button onclick="location.href='register.html'" class="button">
+            <span class="button__span">Register</span>
+        </button>
     </nav>
 
-    <div class="container">
-        <h1>Contact Details</h1>
-        <div class="details">
-            <p><strong>Name:</strong> John Doe</p>
-            <p><strong>Age:</strong> 25</p>
-            <p><strong>Telephone:</strong> (123) 456-7890</p>
-            <p><strong>Address:</strong> 123 Main St, Anytown, USA 12345</p>
-            <p><strong>Student Number:</strong> S12345678</p>
-        </div>
-    </div>
+    <table style="width: 100%; margin-top: 120px;">
+        <tr>
+            <!-- Left Column: News Links -->
+            <td style="width: 25%; vertical-align: top; text-align: center;">
+                <h3>Namibian News Agencies</h3>
+                <div class="image-container">
+                    <a href="https://zone.my.na/youth-mz/nurturing-the-next-generation-of-creatives2023-10-26" target="_blank">
+                        <img src="../IMAGES/my zone.jpg" alt="My Zone" style="width: 80%;">
+                    </a>
+                    <p>My Zone: Nurturing the next generation of creatives</p>
+                </div>
+                <div class="image-container">
+                    <a href="https://neweralive.na/championing-gender-equality-2/" target="_blank">
+                        <img src="../IMAGES/new era.gif" alt="New Era" style="width: 80%;">
+                    </a>
+                    <p>New Era: Championing Gender Equality</p>
+                </div>
+                <div class="image-container">
+                    <a href="https://www.namibian.com.na/youth-foundation-shares-inspiration-at-gala-dinner/" target="_blank">
+                        <img src="../IMAGES/the namibian.jpg" alt="The Namibian" style="width: 80%;">
+                    </a>
+                    <p>The Namibian: Youth foundation shares inspiration at gala dinner</p>
+                </div>
+            </td>
+
+            <!-- Middle Column: Main Content -->
+            <td style="width: 50%; vertical-align: top;">
+                <div class="container">
+                    <h1>Contact Details</h1>
+                    <div class="details">
+                        <p><strong>Name:</strong> Joyce Waandja</p>
+                        <p><strong>Age:</strong> 19</p>
+                        <p><strong>Telephone:</strong> (+26481) 6755733</p>
+                        <p><strong>Address:</strong> Helifax St, Westgate Hill, Rocky Crest</p>
+                        <p><strong>Student Number:</strong> 223118540</p>
+                    </div>
+                </div>
+            </td>
+
+            <!-- Right Column: Empty/Placeholders -->
+            <td style="width: 25%; vertical-align: top; text-align: center;">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+
 
     <footer>
         <p> &copy; Copyright 2024 | Joyce Waandja</p>
     </footer>
-
 </body>
 </html>

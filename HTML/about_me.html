@@ -4,138 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #2171FF;
-        }
-
-        /* Floating island effect for navbar */
-        .navbar {
-            background-color: #e7e5e4;
-            border-radius: 20px;
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-around;
-            width: auto;
-        }
-
-        .navbar button {
-            font-size: 2em;
-            padding: 10px 20px;
-            background-color: transparent;
-            transition: all 0.2s ease-out;
-            border: none;
-            cursor: pointer;
-        }
-
-        .button__span {
-            color: #131313;
-            transition: all 0.2s ease-out;
-            background-color: #e7e5e4;
-            letter-spacing: .15em;
-            text-shadow: 1px -1px 0 #767676, 
-                         -1px 2px 1px #737272, 
-                         -2px 4px 1px #767474, 
-                         -3px 6px 1px #787777, 
-                         -4px 8px 1px #7b7a7a, 
-                         -5px 10px 1px #7f7d7d, 
-                         -6px 12px 1px #828181;
-        }
-
-        .button__span:hover {
-            text-shadow: -1px -1px 0 #767676, 
-                         1px 2px 1px #737272, 
-                         2px 4px 1px #767474;
-        }
-
-        .button:active .button__span {
-            text-shadow: none;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 100px auto; /* Adjusted to make room for the navbar */
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-
-        .details {
-            margin-top: 20px;
-        }
-
-        .details p {
-            margin: 10px 0;
-        }
-
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                width: 90%;
-            }
-
-            .navbar button {
-                width: 100%;
-            }
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../CSS/about_me.css">
 </head>
 <body>
     <nav class="navbar">
         <button onclick="location.href='home.html'" class="button">
             <span class="button__span">Home</span>
         </button>
-        <button  class="button">
+        <button class="button">
             <span class="button__span">About Me</span>
         </button>
         <button onclick="location.href='contact_details.html'" class="button">
             <span class="button__span">Contact</span>
         </button>
+        <button onclick="location.href='login.html'" class="button">
+            <span class="button__span">Login</span>
+        </button>
+        <button onclick="location.href='register.html'" class="button">
+            <span class="button__span">Register</span>
+        </button>
     </nav>
 
-    <div class="container">
-        <h1>About Me</h1>
-        <p>
-            Joyce Waandja, also known as Oshoveli, is a dynamic 19-year old student at the Namibia University of Science and Technology,
-            pursuing a Bachelor's degree in Informatics and Computing. With experience in public speaking, she serves as a radio presenter at Uitani
-            Childline Radio and a presenter for the #Befree Studios. She has represented Namibia on global platforms, including the Woman Deliver 
-            Conference 2023 in Kigali, Rwanda. Waandja has also been a panelist at fundraiser gala dinners and a panelist in a high-level discussion 
-            on Sexual and Reproductive Health and Rights (SRHR) in New York, USA. Driven by a passion for technology, the young lady is also working
-            on innovative projects to support small businesses in Namibia by offering accessible digital solutions. Her work as an ambassador for the
-            #BeFree and #BreakFree campaigns reflects her commitment to creating positive change in her community.
-        </p>
-    </div>
+    <table style="width: 100%; margin-top: 120px;">
+        <tr>
+            <!-- Left Column: News Links -->
+            <td style="width: 25%; vertical-align: top; text-align: center;">
+                <h3>Namibian News Agencies</h3>
+                <div class="image-container">
+                    <a href="https://zone.my.na/youth-mz/nurturing-the-next-generation-of-creatives2023-10-26" target="_blank">
+                        <img src="../IMAGES/my zone.jpg" alt="My Zone" style="width: 80%;">
+                    </a>
+                    <p>My Zone: Nurturing the next generation of creatives</p>
+                </div>
+                <div class="image-container">
+                    <a href="https://neweralive.na/championing-gender-equality-2/" target="_blank">
+                        <img src="../IMAGES/new era.gif" alt="New Era" style="width: 80%;">
+                    </a>
+                    <p>New Era: Championing Gender Equality</p>
+                </div>
+                <div class="image-container">
+                    <a href="https://www.namibian.com.na/youth-foundation-shares-inspiration-at-gala-dinner/" target="_blank">
+                        <img src="../IMAGES/the namibian.jpg" alt="The Namibian" style="width: 80%;">
+                    </a>
+                    <p>The Namibian: Youth foundation shares inspiration at gala dinner</p>
+                </div>
+            </td>
+
+            <!-- Middle Column: About Me Content -->
+            <td style="width: 50%; vertical-align: top;">
+                <div class="container">
+                    <h1>About Me</h1>
+                    <p>
+                        Joyce Waandja, also known as Oshoveli, is a dynamic 19-year-old student at the Namibia University of Science and Technology,
+                        pursuing a Bachelor's degree in Informatics and Computing. With experience in public speaking, she serves as a radio presenter at Uitani
+                        Childline Radio and a presenter for the #BeFree Studios. She has represented Namibia on global platforms, including the Woman Deliver 
+                        Conference 2023 in Kigali, Rwanda. Waandja has also been a panelist at fundraiser gala dinners and a panelist in a high-level discussion 
+                        on Sexual and Reproductive Health and Rights (SRHR) in New York, USA. Driven by a passion for technology, the young lady is also working
+                        on innovative projects to support small businesses in Namibia by offering accessible digital solutions. Her work as an ambassador for the
+                        #BeFree and #BreakFree campaigns reflects her commitment to creating positive change in her community.
+                    </p>
+                </div>
+            </td>
+
+            <!-- Right Column: Empty/Placeholders -->
+            <td style="width: 25%; vertical-align: top; text-align: center;">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <footer>
         <p> &copy; Copyright 2024 | Joyce Waandja</p>
     </footer>
-
 </body>
 </html>
