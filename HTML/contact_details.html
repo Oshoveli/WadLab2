@@ -12,50 +12,101 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
+        /* Floating island effect for navbar */
         .navbar {
             background-color: #333;
-            overflow: hidden;
-            position: sticky;
-            top: 0;
+            border-radius: 20px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-around;
+            width: auto;
         }
-        .navbar a {
-            float: left;
-            display: block;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: background-color 0.3s;
+
+        .navbar button {
+            font-size: 2em;
+            padding: 10px 20px;
+            background-color: transparent;
+            transition: all 0.2s ease-out;
+            border: none;
+            cursor: pointer;
         }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+
+        .button__span {
+            color: #131313;
+            transition: all 0.2s ease-out;
+            background-color: #e7e5e4;
+            letter-spacing: .15em;
+            text-shadow: 1px -1px 0 #767676, 
+                         -1px 2px 1px #737272, 
+                         -2px 4px 1px #767474, 
+                         -3px 6px 1px #787777, 
+                         -4px 8px 1px #7b7a7a, 
+                         -5px 10px 1px #7f7d7d, 
+                         -6px 12px 1px #828181;
         }
+
+        .button__span:hover {
+            text-shadow: -1px -1px 0 #767676, 
+                         1px 2px 1px #737272, 
+                         2px 4px 1px #767474;
+        }
+
+        .button:active .button__span {
+            text-shadow: none;
+        }
+
         .container {
             max-width: 600px;
-            margin: 20px auto;
+            margin: 100px auto; /* Adjusted to make room for the navbar */
             background-color: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
+
         h1 {
             color: #333;
             text-align: center;
         }
+
         .details {
             margin-top: 20px;
         }
+
         .details p {
             margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .navbar button {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="home.html">Home</a>
-        <a href="aboutMe.html">About Me</a>
-        <a href="contactdetails.html">Contact</a>
+        <button class="button">
+            <span class="button__span">Home</span>
+        </button>
+        <button class="button">
+            <span class="button__span">About Me</span>
+        </button>
+        <button class="button">
+            <span class="button__span">Contact</span>
+        </button>
     </nav>
 
     <div class="container">
