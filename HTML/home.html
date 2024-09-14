@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: blue;
+            color: white;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6600;
+            text-align: center;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .banner-ad {
+            width: 100%;
+            height: 100px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            cursor: pointer;
+            color: black;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="aboutMe.html">About Me</a>
+        <a href="contactdetails.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>My First Page</h1>
+
+        <h2>Welcome to My Website</h2>
+
+        <div class="image-container">
+            <img src="/api/placeholder/400/300" alt="Placeholder Image">
+            <p>This is a beautiful landscape image.</p>
+        </div>
+
+        <p>Check out this amazing <a href="https://www.example.com" target="_blank">website</a>!</p>
+
+        <div class="banner-ad" id="bannerAd">
+            <p>Your Ad Here</p>
+        </div>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <p>Enjoy this classic song!</p>
+    </div>
+
+    <footer>
+        <p>Developer: developer@example.com | &copy; 2024</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const ads = [
+                "New Product Launch!",
+                "Limited Time Offer!",
+                "Subscribe Now!",
+                "Free Shipping on All Orders!"
+            ];
+
+            function changeAd() {
+                const randomAd = ads[Math.floor(Math.random() * ads.length)];
+                $("#bannerAd p").text(randomAd);
+            }
+
+            $("#bannerAd").on("click mouseenter", changeAd);
+        });
+    </script>
+</body>
+</html>
